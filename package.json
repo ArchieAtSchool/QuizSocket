@@ -1,0 +1,22 @@
+{
+  "name": "quizsocket",
+  "version": "1.0.0",
+  "description": "the best quiz unofficially",
+  "homepage": "https://github.com/ArchieAtSchool/QuizSocket#readme",
+  "bugs": {
+    "url": "https://github.com/ArchieAtSchool/QuizSocket/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArchieAtSchool/QuizSocket.git"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "socket.io": "^4.8.4"
+  }
+}
