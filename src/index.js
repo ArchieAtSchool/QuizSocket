@@ -9,13 +9,13 @@ const io = new Server(3000, {
 
 io.on("connection", (socket) => {
   console.log(`User connected: ${socket.id}`);
-
   // Listen for custom events from the client
-  socket.on("message", (data) => {
-    console.log("Received data:", data);
-    
-    // Broadcast message to all other connected clients
-    socket.broadcast.emit("message", data);
+  socket.on("register", ({ name, email, id }) => {
+    console.log("Registered " + socket.id + " as " + name + " in " + id);
+    socket.data_name = name
+    socket.data_email = email
+    socket.join(id)
+    socket.in(id).emit("join", {"name": name, "email": email})
   });
 
   // Handle client disconnects
